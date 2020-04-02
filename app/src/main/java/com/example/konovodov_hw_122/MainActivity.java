@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
     Button nextButton;
     Button previousButton;
     TextView textView;
-    TextView textView2;
-    ArrayList<Integer> screenCount = new ArrayList<>();
+
     int randomValue;
     int currentItemValue = 0;
 
@@ -35,8 +34,16 @@ public class MainActivity extends AppCompatActivity {
         textView = (TextView) findViewById(R.id.textView);
 
         randomValue = (int) (Math.random() * 100);
+        /*
+        currentItemValue++;
+        if ((currentItemValue%2)==0) {
+            imagePlace.setImageResource(R.drawable.unicornfun);
+        }
+        else {imagePlace.setImageResource(R.drawable.unicorn);}
+        */
 
         textView.setText(getString(R.string.hyperlink1) + randomValue);
+
 
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
