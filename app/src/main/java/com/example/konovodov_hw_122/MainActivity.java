@@ -34,43 +34,15 @@ public class MainActivity extends AppCompatActivity {
         previousButton = (Button) findViewById(R.id.button);
         textView = (TextView) findViewById(R.id.textView);
 
-
-
         randomValue = (int) (Math.random() * 100);
 
-        /*
-        screenCount.add(randomValue);
-
-        currentItemValue = screenCount.size();
-
-        textView.setText(getString(R.string.hyperlink1) + screenCount.get(currentItemValue - 1) + " currentItemValue = " + currentItemValue);
-*/
         textView.setText(getString(R.string.hyperlink1) + randomValue);
 
-//-----------------------------------------------------------------------------
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {// отсчет в плюс
-                Intent intent = new Intent (MainActivity.this/*getApplicationContext()*/, MainActivity.class);
-                startActivityForResult(intent, -1);// startActivity(intent);
-
-                /*
-                if (currentItemValue == screenCount.size()) {
-                    randomValue = (int) (Math.random() * 100);
-                    screenCount.add(randomValue);
-                    currentItemValue = screenCount.size();
-                    textView.setText(getString(R.string.hyperlink1) + screenCount.get(currentItemValue - 1));
-
-                } else {
-                    currentItemValue++;
-                    textView.setText(getString(R.string.hyperlink1) + screenCount.get(currentItemValue - 1));
-                }
-                textView2.setText("currentItemValue = " + currentItemValue);
-                if ((randomValue%2)==0) {imagePlace.setImageResource(R.drawable.unicorn);}
-                else {imagePlace.setImageResource(R.drawable.unicornfun);}
-
-                */
-
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -78,23 +50,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {//отсчет в минус
                 onBackPressed();
-                //Intent intent = new Intent (MainActivity.this/*getApplicationContext()*/, MainActivity.class);
-                //startActivityForResult(intent, -1);// startActivity(intent);
-
-                /*
-                if (currentItemValue > 1) {
-                    currentItemValue--;
-
-                    textView.setText(getString(R.string.hyperlink1) + screenCount.get(currentItemValue - 1));
-                } else {
-
-                    System.exit(0);
-
-                } // выход
-
-                textView2.setText("currentItemValue = " + currentItemValue);
-
-                 */
             }
         });
 
